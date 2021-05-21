@@ -23,6 +23,6 @@ class DecodeText:
 
 
 app = falcon.App(middleware=falcon.CORSMiddleware(
-    allow_origins='https://gracious-mcclintock-76e52c.netlify.app/', allow_credentials='*'))
+    allow_origins='https://gracious-mcclintock-76e52c.netlify.app', allow_credentials='*'))
 app.add_route('/v1/encode', EncodeText())
 app.add_route('/v1/decode', DecodeText())
