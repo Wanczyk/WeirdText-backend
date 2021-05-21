@@ -3,6 +3,12 @@
 ---
 ## How to deploy
 
+After push or merge to `master` Heroku automatically deploys the app.
+
+To run this app locally run this command:
+
+`gunicorn -b 0.0.0.0:5000 main:app --reload`
+
 ---
 ## REST API endpoints
 
