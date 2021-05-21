@@ -15,7 +15,7 @@ class TestWeirdText(unittest.TestCase):
         )
         original_words = ["sentence", "some", "words"]
         expected_output = (
-            "This is a long looong test sentence,\n" 
+            "This is a long looong test sentence,\n"
             "with some big (biiiiig) words!"
         )
         result = WeirdText.decode(encoded_text, original_words)
@@ -23,7 +23,7 @@ class TestWeirdText(unittest.TestCase):
 
     def test_decode_raise_exception(self):
         encoded_text = (
-            "This is a long looong test setcenne,\n" 
+            "This is a long looong test setcenne,\n"
             "with smoe big (biiiiig) wdors!"
         )
         original_words = ["sentence", "some", "words"]
