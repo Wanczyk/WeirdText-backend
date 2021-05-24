@@ -51,7 +51,7 @@ class WeirdText:
         """
         if not (encoded_text.startswith(cls.SEPARATOR) or encoded_text.endswith(cls.SEPARATOR)):
             raise WeirdTextDecodeError("Text don't look line WeirdText encoded.")
-        encoded_text = encoded_text.strip(cls.SEPARATOR)
+        encoded_text = encoded_text.replace(cls.SEPARATOR, "")
         tokenize_re = re.compile(r"(\w+)", re.U)
         encoded_text_words = tokenize_re.findall(encoded_text)
         for encoded_word in encoded_text_words:
